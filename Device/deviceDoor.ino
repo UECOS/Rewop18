@@ -382,7 +382,7 @@ void loop()
   {
     if((int)(SystemTickCounterRead() - send_interval_ms)>INTERVAL)
     {
-      InitTempSensor();
+      CheckTemperatureStatus();
       send_interval_ms = SystemTickCounterRead();
     }
 
