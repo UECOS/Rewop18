@@ -420,7 +420,7 @@ void CheckTemperatureStatus()
     
     char buff[128];
     sprintf(buff, "Environment \r\n Temp:%s%c    \r\n Humidity:%s%c  \r\n Atm: %s%s",f2s(temperature, 1),temperatureUnit, f2s(humidity, 1), humidityUnit, f2s(pressure,1), pressureUnit);
-    Screen.print(buff);
+    Screen.print(1, buff);
 
     char sensorData[200];
     snprintf(sensorData, sizeof(sensorData), "{\"temperature\":%s,\"temperature_unit\":\"%c\",\"humidity\":%s,\"humidity_unit\":\"%c\",\"pressure\":%s,\"pressure_unit\":\"%s\"}", f2s(temperature, 1), temperatureUnit,f2s(humidity, 1), humidityUnit,f2s(pressure, 1), pressureUnit);
@@ -533,9 +533,9 @@ void loop()
       lis2mdl->getMAxes(axes);
       Serial.printf("Axes: x - %d, y - %d, z - %d\r\n", axes[0], axes[1], axes[2]);
       
-      Screen.print(1, " ");
-      Screen.print(2, " ");
-      Screen.print(3, " ");
+      //Screen.print(1, " ");
+      //Screen.print(2, " ");
+      //Screen.print(3, " ");
       /*
     
     char buffer[50];
