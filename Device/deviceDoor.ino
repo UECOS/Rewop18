@@ -345,6 +345,8 @@ void setup()
 
   Screen.print(3, " > Magnetometer");
   InitMagnetometer();
+  Screen.print(3, " > TempSensor");
+  InitTempSensor();
 }
 
 void loop()
