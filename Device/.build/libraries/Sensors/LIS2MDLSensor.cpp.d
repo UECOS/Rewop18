@@ -1,4 +1,4 @@
-c:\Users\ibi\Documents\IoTWorkbenchProjects\Rewop_Door_Sensor\Device\.build\libraries\Sensors\LIS2MDLSensor.cpp.o: \
+c:\Users\ibi\Documents\IoTWorkbenchProjects\Rewop18\Device\.build\libraries\Sensors\LIS2MDLSensor.cpp.o: \
  C:\Users\ibi\AppData\Local\Arduino15\packages\AZ3166\hardware\stm32f4\1.4.1\libraries\Sensors\src\LIS2MDLSensor.cpp \
  C:\Users\ibi\AppData\Local\Arduino15\packages\AZ3166\hardware\stm32f4\1.4.1\cores\arduino/system/mbed_config.h \
  C:\Users\ibi\AppData\Local\Arduino15\packages\AZ3166\hardware\stm32f4\1.4.1\libraries\Sensors\src\LIS2MDLSensor.h \

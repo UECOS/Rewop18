@@ -1,10 +1,10 @@
-# 1 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\ShakeUI.cpp"
-# 1 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\ShakeUI.cpp"
+# 1 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\ShakeUI.cpp"
+# 1 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\ShakeUI.cpp"
 // Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. 
-# 4 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\ShakeUI.cpp" 2
-# 5 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\ShakeUI.cpp" 2
-# 6 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\ShakeUI.cpp" 2
+# 4 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\ShakeUI.cpp" 2
+# 5 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\ShakeUI.cpp" 2
+# 6 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\ShakeUI.cpp" 2
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Shake shake icon
@@ -140,20 +140,20 @@ void DrawTweetImage(int line, int col, int status)
         Screen.draw(col, line * 2, col + 76, line * 2 + 4, (unsigned char*)newTweet);
     }
 }
-# 1 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino"
-# 2 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino" 2
-# 3 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino" 2
-# 4 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino" 2
-# 5 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino" 2
-# 6 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino" 2
-# 7 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino" 2
-# 8 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino" 2
-# 9 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino" 2
-# 10 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino" 2
-# 11 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino" 2
-# 12 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino" 2
-# 13 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino" 2
-# 14 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino" 2
+# 1 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino"
+# 2 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino" 2
+# 3 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino" 2
+# 4 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino" 2
+# 5 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino" 2
+# 6 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino" 2
+# 7 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino" 2
+# 8 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino" 2
+# 9 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino" 2
+# 10 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino" 2
+# 11 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino" 2
+# 12 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino" 2
+# 13 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino" 2
+# 14 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino" 2
 
 DevI2C *ext_i2c;
 HTS221Sensor *ht_sensor;
@@ -254,9 +254,9 @@ static void InitWiFi()
 
 void sendData(const char *data, const char *schema){
   time_t t = time(
-# 113 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino" 3 4
+# 113 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino" 3 4
                  __null
-# 113 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino"
+# 113 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino"
                      );
   char buf[sizeof "2011-10-08T07:07:09Z"];
   strftime(buf, sizeof buf, "%FT%TZ", gmtime(&t));
@@ -276,9 +276,9 @@ static void InitMagnetometer()
   i2c = new DevI2C(D14, D15);
   lis2mdl = new LIS2MDLSensor(*i2c);
   lis2mdl->init(
-# 131 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino" 3 4
+# 131 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino" 3 4
                __null
-# 131 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino"
+# 131 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino"
                    );
 
   lis2mdl->getMAxes(axes);
@@ -380,16 +380,16 @@ static void InitTempSensor()
 
   ht_sensor = new HTS221Sensor(*ext_i2c);
   ht_sensor->init(
-# 231 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino" 3 4
+# 231 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino" 3 4
                  __null
-# 231 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino"
+# 231 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino"
                      );
 
   lp_sensor= new LPS22HBSensor(*ext_i2c);
   lp_sensor->init(
-# 234 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino" 3 4
+# 234 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino" 3 4
                  __null
-# 234 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino"
+# 234 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino"
                      );
 }
 
@@ -418,10 +418,10 @@ void CheckTemperatureStatus()
   catch(int error)
   {
     do{ { LOGGER_LOG l = xlogging_get_log_function(); if (l != 
-# 261 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino" 3 4
+# 261 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino" 3 4
    __null
-# 261 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino"
-   ) l(AZ_LOG_ERROR, (strrchr("c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino", '/') ? strrchr("c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino", '/') + 1 : (strrchr("c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino", '\\') ? strrchr("c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino", '\\') + 1 : "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino")), __func__, 261, 0x01, "*** Read sensor failed: %d",error); }; }while((void)0,0);
+# 261 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino"
+   ) l(AZ_LOG_ERROR, (strrchr("c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino", '/') ? strrchr("c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino", '/') + 1 : (strrchr("c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino", '\\') ? strrchr("c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino", '\\') + 1 : "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino")), __func__, 261, 0x01, "*** Read sensor failed: %d",error); }; }while((void)0,0);
   }
 
 
@@ -445,10 +445,10 @@ void CheckTemperatureStatus()
 int device_method_callback(const char *methodName, const unsigned char *payload, int length, unsigned char **response, int *responseLength){
 
   do{{ LOGGER_LOG l = xlogging_get_log_function(); if (l != 
-# 284 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino" 3 4
+# 284 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino" 3 4
  __null
-# 284 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino"
- ) l(AZ_LOG_INFO, (strrchr("c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino", '/') ? strrchr("c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino", '/') + 1 : (strrchr("c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino", '\\') ? strrchr("c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino", '\\') + 1 : "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino")), __func__, 284, 0x01, "*** Remote method: %s",methodName); }; }while((void)0,0);
+# 284 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino"
+ ) l(AZ_LOG_INFO, (strrchr("c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino", '/') ? strrchr("c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino", '/') + 1 : (strrchr("c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino", '\\') ? strrchr("c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino", '\\') + 1 : "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino")), __func__, 284, 0x01, "*** Remote method: %s",methodName); }; }while((void)0,0);
 
   if(strcmp(methodName,"LedColor")==0){
     int n=sizeof(colors)/sizeof(colors[0]);
@@ -473,10 +473,10 @@ int device_method_callback(const char *methodName, const unsigned char *payload,
   }
 
   do{ { LOGGER_LOG l = xlogging_get_log_function(); if (l != 
-# 308 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino" 3 4
+# 308 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino" 3 4
  __null
-# 308 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino"
- ) l(AZ_LOG_ERROR, (strrchr("c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino", '/') ? strrchr("c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino", '/') + 1 : (strrchr("c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino", '\\') ? strrchr("c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino", '\\') + 1 : "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino")), __func__, 308, 0x01, "*** Remote method: %s not found",methodName); }; }while((void)0,0);
+# 308 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino"
+ ) l(AZ_LOG_ERROR, (strrchr("c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino", '/') ? strrchr("c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino", '/') + 1 : (strrchr("c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino", '\\') ? strrchr("c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino", '\\') + 1 : "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino")), __func__, 308, 0x01, "*** Remote method: %s not found",methodName); }; }while((void)0,0);
   return 500;
 }
 
@@ -516,6 +516,8 @@ void setup()
 
   Screen.print(3, " > Magnetometer");
   InitMagnetometer();
+  Screen.print(3, " > TempSensor");
+  InitTempSensor();
 }
 
 void loop()
@@ -560,12 +562,12 @@ void loop()
     Screen.print(3, buffer);
 
     */
-# 381 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino"
+# 383 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino"
     if(hasWifi)
   {
     if((int)(SystemTickCounterRead() - send_interval_ms)>10000)
     {
-      InitTempSensor();
+      CheckTemperatureStatus();
       send_interval_ms = SystemTickCounterRead();
     }
 

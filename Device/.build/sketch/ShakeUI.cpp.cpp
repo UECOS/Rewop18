@@ -1,5 +1,5 @@
-#line 1 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\ShakeUI.cpp"
-#line 1 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\ShakeUI.cpp"
+#line 1 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\ShakeUI.cpp"
+#line 1 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\ShakeUI.cpp"
 // Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. 
 #include "Arduino.h"
@@ -16,33 +16,33 @@ static const unsigned char smallTweet [] =
     0x01,0x00,
 };
 
-#line 17 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\ShakeUI.cpp"
+#line 17 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\ShakeUI.cpp"
 void DrawAppTitle(char* text);
-#line 60 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\ShakeUI.cpp"
+#line 60 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\ShakeUI.cpp"
 void DrawShakeAnimation(void);
-#line 80 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\ShakeUI.cpp"
+#line 80 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\ShakeUI.cpp"
 void DrawCheckBox(int line, int col, int status);
-#line 130 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\ShakeUI.cpp"
+#line 130 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\ShakeUI.cpp"
 void DrawTweetImage(int line, int col, int status);
-#line 92 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino"
+#line 92 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino"
 static void InitWiFi();
-#line 112 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino"
+#line 112 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino"
 void sendData(const char *data, const char *schema);
-#line 126 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino"
+#line 126 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino"
 static void InitMagnetometer();
-#line 171 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino"
+#line 171 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino"
 void CheckMagnetometerStatus();
-#line 225 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino"
+#line 225 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino"
 static void InitTempSensor();
-#line 238 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino"
+#line 238 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino"
 void CheckTemperatureStatus();
-#line 282 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino"
+#line 282 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino"
 int device_method_callback(const char *methodName, const unsigned char *payload, int length, unsigned char **response, int *responseLength);
-#line 314 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino"
+#line 314 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino"
 void setup();
-#line 350 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino"
+#line 352 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino"
 void loop();
-#line 17 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\ShakeUI.cpp"
+#line 17 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\ShakeUI.cpp"
 void DrawAppTitle(char* text)
 {
     char sz[32];
@@ -167,7 +167,7 @@ void DrawTweetImage(int line, int col, int status)
         Screen.draw(col, line * 2, col + 76, line * 2 + 4, (unsigned char*)newTweet);
     }
 }
-#line 1 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop_Door_Sensor\\Device\\deviceDoor.ino"
+#line 1 "c:\\Users\\ibi\\Documents\\IoTWorkbenchProjects\\Rewop18\\Device\\deviceDoor.ino"
 #include "Arduino.h"
 #include "AZ3166WiFi.h"
 #include "AzureIotHub.h"
@@ -515,6 +515,8 @@ void setup()
 
   Screen.print(3, " > Magnetometer");
   InitMagnetometer();
+  Screen.print(3, " > TempSensor");
+  InitTempSensor();
 }
 
 void loop()
@@ -552,7 +554,7 @@ void loop()
   {
     if((int)(SystemTickCounterRead() - send_interval_ms)>INTERVAL)
     {
-      InitTempSensor();
+      CheckTemperatureStatus();
       send_interval_ms = SystemTickCounterRead();
     }
 
